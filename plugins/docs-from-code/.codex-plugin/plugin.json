@@ -1,0 +1,30 @@
+{
+  "name": "docs-from-code",
+  "version": "1.0.0",
+  "description": "Draft accurate developer documentation by tracing the current implementation and existing conventions.",
+  "author": {
+    "name": "GhosTnever"
+  },
+  "homepage": "https://github.com/GhosTnever-lkm/docs-from-code",
+  "repository": "https://github.com/GhosTnever-lkm/docs-from-code",
+  "license": "MIT",
+  "keywords": [
+    "codex",
+    "developer-tools",
+    "docs-from-code"
+  ],
+  "interface": {
+    "displayName": "Docs from Code",
+    "longDescription": "Draft accurate developer documentation by tracing the current implementation and existing conventions.",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "developerName": "GhosTnever",
+    "shortDescription": "Draft accurate developer documentation by tracing the current implementation and existing conventions.",
+    "category": "Documentation"
+  },
+  "skills": [
+    "./skills/docs-from-code"
+  ]
+}

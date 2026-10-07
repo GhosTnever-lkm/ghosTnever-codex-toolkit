@@ -1,0 +1,68 @@
+{
+  "name": "ghosTnever-codex-toolkit",
+  "interface": {
+    "displayName": "GhosTnever Codex Toolkit"
+  },
+  "plugins": [
+    {
+      "name": "repo-onboarding",
+      "source": {
+        "source": "local",
+        "path": "./plugins/repo-onboarding"
+      },
+      "policy": {
+        "authentication": "ON_INSTALL",
+        "installation": "AVAILABLE"
+      },
+      "category": "Developer Tools"
+    },
+    {
+      "name": "release-checklist",
+      "source": {
+        "source": "local",
+        "path": "./plugins/release-checklist"
+      },
+      "policy": {
+        "authentication": "ON_INSTALL",
+        "installation": "AVAILABLE"
+      },
+      "category": "Developer Tools"
+    },
+    {
+      "name": "change-review",
+      "source": {
+        "source": "local",
+        "path": "./plugins/change-review"
+      },
+      "policy": {
+        "authentication": "ON_INSTALL",
+        "installation": "AVAILABLE"
+      },
+      "category": "Code Review"
+    },
+    {
+      "name": "ci-failure-guide",
+      "source": {
+        "source": "local",
+        "path": "./plugins/ci-failure-guide"
+      },
+      "policy": {
+        "authentication": "ON_INSTALL",
+        "installation": "AVAILABLE"
+      },
+      "category": "Developer Tools"
+    },
+    {
+      "name": "docs-from-code",
+      "source": {
+        "source": "local",
+        "path": "./plugins/docs-from-code"
+      },
+      "policy": {
+        "authentication": "ON_INSTALL",
+        "installation": "AVAILABLE"
+      },
+      "category": "Documentation"
+    }
+  ]
+}

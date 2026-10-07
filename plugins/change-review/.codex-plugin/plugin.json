@@ -1,0 +1,30 @@
+{
+  "name": "change-review",
+  "version": "1.0.0",
+  "description": "Review a diff for correctness and regression risk, reporting only actionable findings.",
+  "author": {
+    "name": "GhosTnever"
+  },
+  "homepage": "https://github.com/GhosTnever-lkm/change-review",
+  "repository": "https://github.com/GhosTnever-lkm/change-review",
+  "license": "MIT",
+  "keywords": [
+    "codex",
+    "developer-tools",
+    "change-review"
+  ],
+  "interface": {
+    "displayName": "Change Review",
+    "longDescription": "Review a diff for correctness and regression risk, reporting only actionable findings.",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "developerName": "GhosTnever",
+    "shortDescription": "Review a diff for correctness and regression risk, reporting only actionable findings.",
+    "category": "Code Review"
+  },
+  "skills": [
+    "./skills/change-review"
+  ]
+}

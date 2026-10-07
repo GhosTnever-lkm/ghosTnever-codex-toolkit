@@ -44,3 +44,4 @@ The local marketplace check adds and removes only this toolkit marketplace entry
 ## License
 
 MIT. See [LICENSE](LICENSE).
+

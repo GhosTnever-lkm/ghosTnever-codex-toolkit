@@ -17,7 +17,7 @@ Five focused Codex plugins for the everyday work around a software repository: o
 In Codex, add this GitHub repository as a plugin marketplace. Then install a plugin by its ID from the marketplace browser. With the CLI:
 
 ```powershell
-codex plugin marketplace add GhosTnever-lkm/ghosTnever-codex-toolkit
+codex plugin marketplace add https://github.com/GhosTnever-lkm/ghosTnever-codex-toolkit.git --ref main
 codex plugin list
 codex plugin add repo-onboarding --marketplace ghosTnever-codex-toolkit
 ```
@@ -44,4 +44,5 @@ The local marketplace check adds and removes only this toolkit marketplace entry
 ## License
 
 MIT. See [LICENSE](LICENSE).
+
 

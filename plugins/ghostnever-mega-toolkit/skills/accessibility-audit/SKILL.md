@@ -14,3 +14,7 @@ Inspect the rendered interface and its actual markup where available. Follow the
 - Form errors and validation connected to fields and announced clearly.
 
 Prioritize blockers by user impact, cite exact components, and offer concrete fixes. Automated scans are useful evidence but cannot replace keyboard and assistive-technology checks; state what was and was not tested.
+
+## Toolkit module setting
+
+Before following this workflow, check `%CODEX_HOME%/ghostnever-mega-toolkit/settings.json`; if `CODEX_HOME` is unset, check `%USERPROFILE%/.codex/ghostnever-mega-toolkit/settings.json`. If the JSON `disabled` array contains `accessibility-audit`, do not apply this skill's specialized workflow unless the user explicitly asks to use it for the current task. If the file is missing or the name is absent from `disabled`, this skill is enabled. The included `scripts/mega_toolkit_settings.py` helper manages this file.

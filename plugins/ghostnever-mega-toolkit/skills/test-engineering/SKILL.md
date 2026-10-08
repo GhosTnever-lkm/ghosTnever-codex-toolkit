@@ -15,3 +15,7 @@ Tests should prove observable contracts with minimal brittleness. Read the proje
 6. Confirm a failing test would detect the old bug when feasible; report what was actually executed.
 
 Do not inflate counts with duplicate examples. Tests should assert outcomes and error semantics, not private implementation details unless unavoidable.
+
+## Toolkit module setting
+
+Before following this workflow, check `%CODEX_HOME%/ghostnever-mega-toolkit/settings.json`; if `CODEX_HOME` is unset, check `%USERPROFILE%/.codex/ghostnever-mega-toolkit/settings.json`. If the JSON `disabled` array contains `test-engineering`, do not apply this skill's specialized workflow unless the user explicitly asks to use it for the current task. If the file is missing or the name is absent from `disabled`, this skill is enabled. The included `scripts/mega_toolkit_settings.py` helper manages this file.

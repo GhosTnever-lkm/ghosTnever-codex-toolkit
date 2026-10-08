@@ -35,3 +35,7 @@ Review the requested diff as a careful maintainer. Find actionable correctness i
 `[P2] Short issue title` — `path/to/file.ext:line`
 
 Explain the triggering condition, observable failure, and why the changed lines cause it. Add a minimal remediation direction.
+
+## Toolkit module setting
+
+Before following this workflow, check `%CODEX_HOME%/ghostnever-mega-toolkit/settings.json`; if `CODEX_HOME` is unset, check `%USERPROFILE%/.codex/ghostnever-mega-toolkit/settings.json`. If the JSON `disabled` array contains `change-review`, do not apply this skill's specialized workflow unless the user explicitly asks to use it for the current task. If the file is missing or the name is absent from `disabled`, this skill is enabled. The included `scripts/mega_toolkit_settings.py` helper manages this file.

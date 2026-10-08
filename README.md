@@ -1,6 +1,6 @@
 # GhosTnever Codex Toolkit
 
-Focused Codex plugins for everyday software work, from understanding a codebase to reviewing changes, debugging CI, planning releases, and maintaining documentation. The Mega Toolkit combines 21 practical skills in one plugin; the focused plugins remain available when you want a smaller install.
+Focused Codex plugins for everyday software work, from understanding a codebase to reviewing changes, debugging CI, planning releases, and maintaining documentation. The Mega Toolkit combines 41 practical skills in one plugin, with local per-skill controls; the focused plugins remain available when you want a smaller install.
 
 ## Plugins
 
@@ -11,7 +11,7 @@ Focused Codex plugins for everyday software work, from understanding a codebase 
 | [CI Failure Guide](plugins/ci-failure-guide) | Trace build and test failures to a focused next check. |
 | [Release Checklist](plugins/release-checklist) | Review release readiness and draft notes without publishing automatically. |
 | [Docs from Code](plugins/docs-from-code) | Write developer docs grounded in the current implementation. |
-| [GhosTnever Mega Toolkit](plugins/ghostnever-mega-toolkit) | 21 skills for planning, coding, debugging, testing, security, performance, APIs, databases, accessibility, GitHub Actions, releases, and game mods. |
+| [GhosTnever Mega Toolkit](plugins/ghostnever-mega-toolkit) | 41 skills for planning, coding, debugging, testing, security, performance, APIs, databases, accessibility, GitHub Actions, releases, game mods, and more, with per-skill controls. |
 
 ## Add this marketplace
 
@@ -24,6 +24,19 @@ codex plugin add repo-onboarding --marketplace ghosTnever-codex-toolkit
 ```
 
 Swap `repo-onboarding` for any plugin ID in the table. To install the all-in-one toolkit, use `ghostnever-mega-toolkit`. Restart Codex if it asks you to reload plugins.
+
+### Module controls
+
+Use the included helper script with Python 3 from the installed plugin folder:
+
+```powershell
+python <plugin-folder>\scripts\mega_toolkit_settings.py list
+python <plugin-folder>\scripts\mega_toolkit_settings.py disable git-workflow
+python <plugin-folder>\scripts\mega_toolkit_settings.py enable git-workflow
+python <plugin-folder>\scripts\mega_toolkit_settings.py reset
+```
+
+The local settings file keeps disabled module names under `%CODEX_HOME%\ghostnever-mega-toolkit\settings.json` (or `%USERPROFILE%\.codex\ghostnever-mega-toolkit\settings.json` if `CODEX_HOME` is unset). No settings are sent over the network. Codex currently does not offer native graphical toggles for individual skills.
 
 ## Design notes
 

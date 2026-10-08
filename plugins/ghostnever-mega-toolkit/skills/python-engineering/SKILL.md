@@ -15,3 +15,7 @@ Read `pyproject.toml`, supported Python versions, package layout, formatter/lint
 - Test behavior without network access unless the product explicitly depends on it.
 
 Run only project-prescribed checks. Review generated files and package contents before reporting. Distinguish static checks from a built and executed package.
+
+## Toolkit module setting
+
+Before following this workflow, check `%CODEX_HOME%/ghostnever-mega-toolkit/settings.json`; if `CODEX_HOME` is unset, check `%USERPROFILE%/.codex/ghostnever-mega-toolkit/settings.json`. If the JSON `disabled` array contains `python-engineering`, do not apply this skill's specialized workflow unless the user explicitly asks to use it for the current task. If the file is missing or the name is absent from `disabled`, this skill is enabled. The included `scripts/mega_toolkit_settings.py` helper manages this file.

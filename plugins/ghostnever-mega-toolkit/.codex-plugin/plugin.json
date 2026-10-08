@@ -2,24 +2,45 @@
   "skills": [
     "./skills/accessibility-audit",
     "./skills/api-design",
+    "./skills/archive-hardening",
+    "./skills/browser-automation",
     "./skills/bug-hunting",
     "./skills/change-review",
     "./skills/ci-failure-triage",
+    "./skills/configuration-management",
+    "./skills/conflict-resolution",
+    "./skills/data-validation",
     "./skills/database-migrations",
+    "./skills/database-performance",
     "./skills/dependency-audit",
     "./skills/docs-from-code",
     "./skills/feature-planning",
+    "./skills/flaky-test-triage",
     "./skills/game-mod-support",
+    "./skills/git-workflow",
     "./skills/github-actions",
     "./skills/implementation-workflow",
+    "./skills/incident-postmortem",
     "./skills/incident-response",
+    "./skills/integration-test-design",
+    "./skills/localization-qa",
+    "./skills/logging-observability",
+    "./skills/mod-compatibility",
     "./skills/performance-analysis",
     "./skills/product-usability-review",
+    "./skills/pull-request-prep",
     "./skills/python-engineering",
+    "./skills/refactoring-plan",
+    "./skills/release-packaging",
     "./skills/release-readiness",
     "./skills/repo-tour",
+    "./skills/secret-redaction",
     "./skills/secure-code-review",
+    "./skills/seo-audit",
+    "./skills/shell-scripting",
+    "./skills/sql-query-review",
     "./skills/test-engineering",
+    "./skills/toolkit-settings",
     "./skills/typescript-node"
   ],
   "license": "MIT",
@@ -28,19 +49,20 @@
     "name": "GhosTnever"
   },
   "interface": {
-    "longDescription": "21 focused skills for planning, building, reviewing, securing, debugging, and releasing software.",
+    "longDescription": "41 focused task skills for Codex software work, with local per-skill enable and disable controls. Toolkit Settings is included as a control guide.",
     "category": "Developer Tools",
     "developerName": "GhosTnever",
-    "shortDescription": "21 skills for software work",
+    "shortDescription": "41 workflows + toggles",
     "capabilities": [
       "Read",
       "Write"
     ],
-    "displayName": "GhosTnever Mega Toolkit"
+    "displayName": "GhosTnever Mega Toolkit",
+    "defaultPrompt": "Use the relevant GhosTnever Mega Toolkit skill for this software task, follow the repository guidance, and report verified evidence clearly."
   },
   "homepage": "https://github.com/GhosTnever-lkm/ghosTnever-codex-toolkit/tree/main/plugins/ghostnever-mega-toolkit",
   "repository": "https://github.com/GhosTnever-lkm/ghosTnever-codex-toolkit",
-  "description": "21 focused Codex skills for planning, building, reviewing, securing, debugging, and releasing software.",
+  "description": "41 focused task skills for Codex software work, with local per-skill enable and disable controls.",
   "keywords": [
     "codex",
     "developer-tools",
@@ -48,5 +70,5 @@
     "game-modding",
     "security"
   ],
-  "version": "1.0.1"
+  "version": "1.1.1"
 }

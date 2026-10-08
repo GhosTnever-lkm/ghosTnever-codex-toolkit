@@ -1,9 +1,7 @@
 # Changelog
 
-## 1.0.1 - 2026-10-08
+## 1.1.1 - 2026-10-08
 
-- Completed the standard MIT license text.
-
-## 1.0.0 - 2026-10-08
-
-- Initial release with 21 task-focused Codex skills covering software development, quality, security, release work, and game modding.
+- Added 20 task workflows for a total of 41, plus the settings guide.
+- Added local per-workflow enable and disable controls.
+- Updated setup instructions and marketplace metadata.

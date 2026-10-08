@@ -15,3 +15,7 @@ Read manifests, lockfiles, install scripts, and CI configuration. Verify what is
 6. Run the package manager's lockfile and focused CI checks only when authorized or project-required.
 
 Report package, role, evidence, concrete risk, proposed action, and migration/testing impact. Distinguish verified advisories from general maintenance concerns.
+
+## Toolkit module setting
+
+Before following this workflow, check `%CODEX_HOME%/ghostnever-mega-toolkit/settings.json`; if `CODEX_HOME` is unset, check `%USERPROFILE%/.codex/ghostnever-mega-toolkit/settings.json`. If the JSON `disabled` array contains `dependency-audit`, do not apply this skill's specialized workflow unless the user explicitly asks to use it for the current task. If the file is missing or the name is absent from `disabled`, this skill is enabled. The included `scripts/mega_toolkit_settings.py` helper manages this file.

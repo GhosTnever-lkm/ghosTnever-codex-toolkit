@@ -15,3 +15,7 @@ Read repository workflow conventions and the official action/runtime documentati
 6. Check fork pull request behavior, concurrency cancellation, matrix coverage, and required branch checks.
 
 Validate YAML and exercise the relevant workflow locally or through CI when possible. Report platform-only behavior that was not tested; never claim a workflow passes because its YAML parses.
+
+## Toolkit module setting
+
+Before following this workflow, check `%CODEX_HOME%/ghostnever-mega-toolkit/settings.json`; if `CODEX_HOME` is unset, check `%USERPROFILE%/.codex/ghostnever-mega-toolkit/settings.json`. If the JSON `disabled` array contains `github-actions`, do not apply this skill's specialized workflow unless the user explicitly asks to use it for the current task. If the file is missing or the name is absent from `disabled`, this skill is enabled. The included `scripts/mega_toolkit_settings.py` helper manages this file.

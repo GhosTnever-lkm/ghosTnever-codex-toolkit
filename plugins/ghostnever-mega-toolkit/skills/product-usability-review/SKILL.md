@@ -14,3 +14,7 @@ Start from the target user, primary task, and actual interface. Inspect current 
 5. Offer prioritized changes that can be tied to user outcomes; separate observed friction from design hypotheses.
 
 Keep product copy concise, concrete, and consistent with the user's language. Do not add marketing claims or AI-authorship claims the user did not request.
+
+## Toolkit module setting
+
+Before following this workflow, check `%CODEX_HOME%/ghostnever-mega-toolkit/settings.json`; if `CODEX_HOME` is unset, check `%USERPROFILE%/.codex/ghostnever-mega-toolkit/settings.json`. If the JSON `disabled` array contains `product-usability-review`, do not apply this skill's specialized workflow unless the user explicitly asks to use it for the current task. If the file is missing or the name is absent from `disabled`, this skill is enabled. The included `scripts/mega_toolkit_settings.py` helper manages this file.

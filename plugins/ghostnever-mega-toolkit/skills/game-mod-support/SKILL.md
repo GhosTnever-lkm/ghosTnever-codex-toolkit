@@ -15,3 +15,7 @@ Identify the game, platform, version, mod loader, directory layout, and intended
 6. Clearly separate static checks from in-game verification; never say the mod runs unless tested in the actual game.
 
 Report findings by severity with file paths and exact evidence. Avoid altering unrelated balance or lore while fixing a technical defect.
+
+## Toolkit module setting
+
+Before following this workflow, check `%CODEX_HOME%/ghostnever-mega-toolkit/settings.json`; if `CODEX_HOME` is unset, check `%USERPROFILE%/.codex/ghostnever-mega-toolkit/settings.json`. If the JSON `disabled` array contains `game-mod-support`, do not apply this skill's specialized workflow unless the user explicitly asks to use it for the current task. If the file is missing or the name is absent from `disabled`, this skill is enabled. The included `scripts/mega_toolkit_settings.py` helper manages this file.

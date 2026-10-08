@@ -4,22 +4,22 @@
   "author": {
     "name": "GhosTnever"
   },
-  "version": "1.0.1",
+  "version": "1.1.1",
   "repository": "https://github.com/GhosTnever-lkm/ghosTnever-codex-toolkit",
-  "description": "21 focused Codex skills for planning, building, reviewing, securing, debugging, and releasing software.",
+  "description": "41 focused task skills for Codex software work, with local per-skill enable and disable controls.",
   "homepage": "https://github.com/GhosTnever-lkm/ghosTnever-codex-toolkit/tree/main/plugins/ghostnever-mega-toolkit",
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "extensions": {
     "com.openai": {
       "interface": {
-        "shortDescription": "21 skills for software work",
+        "shortDescription": "41 workflows + toggles",
         "developerName": "GhosTnever",
         "category": "Developer Tools",
         "capabilities": [
           "Read",
           "Write"
         ],
-        "longDescription": "A focused toolkit for repository understanding, planning, implementation, debugging, tests, security, API design, performance, release engineering, accessibility, documentation, and game mods.",
+        "longDescription": "41 focused task skills for Codex software work, with local per-skill enable and disable controls. Toolkit Settings is included as a control guide.",
         "displayName": "GhosTnever Mega Toolkit",
         "defaultPrompt": "Use the relevant GhosTnever Mega Toolkit skill for this software task, follow the repository guidance, and report verified evidence clearly."
       }

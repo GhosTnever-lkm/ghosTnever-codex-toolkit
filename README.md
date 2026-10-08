@@ -1,6 +1,6 @@
 # GhosTnever Codex Toolkit
 
-Five focused Codex plugins for the everyday work around a software repository: orientation, review, CI triage, releases, and documentation. Each plugin is a small, inspectable skill with explicit scope and evidence-first guidance.
+Focused Codex plugins for everyday software work, from understanding a codebase to reviewing changes, debugging CI, planning releases, and maintaining documentation. The Mega Toolkit combines 21 practical skills in one plugin; the focused plugins remain available when you want a smaller install.
 
 ## Plugins
 
@@ -11,6 +11,7 @@ Five focused Codex plugins for the everyday work around a software repository: o
 | [CI Failure Guide](plugins/ci-failure-guide) | Trace build and test failures to a focused next check. |
 | [Release Checklist](plugins/release-checklist) | Review release readiness and draft notes without publishing automatically. |
 | [Docs from Code](plugins/docs-from-code) | Write developer docs grounded in the current implementation. |
+| [GhosTnever Mega Toolkit](plugins/ghostnever-mega-toolkit) | 21 skills for planning, coding, debugging, testing, security, performance, APIs, databases, accessibility, GitHub Actions, releases, and game mods. |
 
 ## Add this marketplace
 
@@ -22,7 +23,7 @@ codex plugin list
 codex plugin add repo-onboarding --marketplace ghosTnever-codex-toolkit
 ```
 
-Swap `repo-onboarding` for any plugin ID in the table. Restart Codex if it asks you to reload plugins.
+Swap `repo-onboarding` for any plugin ID in the table. To install the all-in-one toolkit, use `ghostnever-mega-toolkit`. Restart Codex if it asks you to reload plugins.
 
 ## Design notes
 
@@ -44,5 +45,3 @@ The local marketplace check adds and removes only this toolkit marketplace entry
 ## License
 
 MIT. See [LICENSE](LICENSE).
-
-

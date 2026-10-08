@@ -1,0 +1,52 @@
+{
+  "skills": [
+    "./skills/accessibility-audit",
+    "./skills/api-design",
+    "./skills/bug-hunting",
+    "./skills/change-review",
+    "./skills/ci-failure-triage",
+    "./skills/database-migrations",
+    "./skills/dependency-audit",
+    "./skills/docs-from-code",
+    "./skills/feature-planning",
+    "./skills/game-mod-support",
+    "./skills/github-actions",
+    "./skills/implementation-workflow",
+    "./skills/incident-response",
+    "./skills/performance-analysis",
+    "./skills/product-usability-review",
+    "./skills/python-engineering",
+    "./skills/release-readiness",
+    "./skills/repo-tour",
+    "./skills/secure-code-review",
+    "./skills/test-engineering",
+    "./skills/typescript-node"
+  ],
+  "license": "MIT",
+  "name": "ghostnever-mega-toolkit",
+  "author": {
+    "name": "GhosTnever"
+  },
+  "interface": {
+    "longDescription": "21 focused skills for planning, building, reviewing, securing, debugging, and releasing software.",
+    "category": "Developer Tools",
+    "developerName": "GhosTnever",
+    "shortDescription": "21 skills for software work",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "displayName": "GhosTnever Mega Toolkit"
+  },
+  "homepage": "https://github.com/GhosTnever-lkm/ghosTnever-codex-toolkit/tree/main/plugins/ghostnever-mega-toolkit",
+  "repository": "https://github.com/GhosTnever-lkm/ghosTnever-codex-toolkit",
+  "description": "21 focused Codex skills for planning, building, reviewing, securing, debugging, and releasing software.",
+  "keywords": [
+    "codex",
+    "developer-tools",
+    "software-engineering",
+    "game-modding",
+    "security"
+  ],
+  "version": "1.0.1"
+}

@@ -63,6 +63,18 @@
         "installation": "AVAILABLE"
       },
       "category": "Documentation"
+    },
+    {
+      "name": "ghostnever-mega-toolkit",
+      "source": {
+        "source": "local",
+        "path": "./plugins/ghostnever-mega-toolkit"
+      },
+      "policy": {
+        "authentication": "ON_INSTALL",
+        "installation": "AVAILABLE"
+      },
+      "category": "Developer Tools"
     }
   ]
 }

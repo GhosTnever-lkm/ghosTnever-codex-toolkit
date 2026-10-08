@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.1.2 - 2026-10-08
+
+- Added a Windows PowerShell helper so per-skill controls work without Python.
+- Updated Toolkit Settings to handle enable/disable requests directly in Codex.
+
 ## 1.1.1 - 2026-10-08
 
 - Added 20 focused skills, bringing the Mega Toolkit to 41 task workflows.

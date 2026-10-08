@@ -30,15 +30,17 @@ codex plugin add ghostnever-mega-toolkit --marketplace ghosTnever-codex-toolkit
 
 ## Enable and disable skills
 
-Use Python 3 with the included helper from the installed plugin folder:
+In Codex, ask to enable or disable a workflow by name; the always-on Toolkit Settings skill updates the local setting. On Windows, the included PowerShell helper works without Python:
 
 ```powershell
-python <plugin-folder>\scripts\mega_toolkit_settings.py list
-python <plugin-folder>\scripts\mega_toolkit_settings.py disable git-workflow
-python <plugin-folder>\scripts\mega_toolkit_settings.py enable git-workflow
-python <plugin-folder>\scripts\mega_toolkit_settings.py enable all
-python <plugin-folder>\scripts\mega_toolkit_settings.py reset
+& "<plugin-folder>\scripts\mega_toolkit_settings.ps1" list
+& "<plugin-folder>\scripts\mega_toolkit_settings.ps1" disable git-workflow
+& "<plugin-folder>\scripts\mega_toolkit_settings.ps1" enable git-workflow
+& "<plugin-folder>\scripts\mega_toolkit_settings.ps1" enable all
+& "<plugin-folder>\scripts\mega_toolkit_settings.ps1" reset
 ```
+
+`mega_toolkit_settings.py` is also available for cross-platform use when Python 3 is installed.
 
 The settings file is local: `%CODEX_HOME%\ghostnever-mega-toolkit\settings.json`, or `%USERPROFILE%\.codex\ghostnever-mega-toolkit\settings.json` if `CODEX_HOME` is unset. A missing file means all skills are enabled. The helper supports per-skill enable and disable, listing, and reset. Codex does not currently expose individual native graphical toggles; each skill's instructions respect this local setting, and a user can request a one-time override.
 

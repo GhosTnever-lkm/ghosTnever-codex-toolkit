@@ -27,14 +27,16 @@ Swap `repo-onboarding` for any plugin ID in the table. To install the all-in-one
 
 ### Module controls
 
-Use the included helper script with Python 3 from the installed plugin folder:
+In Codex, ask to enable or disable a workflow by name. On Windows, use the included PowerShell helper from the installed plugin folder:
 
 ```powershell
-python <plugin-folder>\scripts\mega_toolkit_settings.py list
-python <plugin-folder>\scripts\mega_toolkit_settings.py disable git-workflow
-python <plugin-folder>\scripts\mega_toolkit_settings.py enable git-workflow
-python <plugin-folder>\scripts\mega_toolkit_settings.py reset
+& "<plugin-folder>\scripts\mega_toolkit_settings.ps1" list
+& "<plugin-folder>\scripts\mega_toolkit_settings.ps1" disable git-workflow
+& "<plugin-folder>\scripts\mega_toolkit_settings.ps1" enable git-workflow
+& "<plugin-folder>\scripts\mega_toolkit_settings.ps1" reset
 ```
+
+`mega_toolkit_settings.py` is included for cross-platform use when Python 3 is installed.
 
 The local settings file keeps disabled module names under `%CODEX_HOME%\ghostnever-mega-toolkit\settings.json` (or `%USERPROFILE%\.codex\ghostnever-mega-toolkit\settings.json` if `CODEX_HOME` is unset). No settings are sent over the network. Codex currently does not offer native graphical toggles for individual skills.
 

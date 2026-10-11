@@ -27,25 +27,30 @@ def settings_path() -> Path:
     return Path(base).expanduser() / "ghostnever-mega-toolkit" / "settings.json"
 
 
-def load(path: Path) -> set[str]:
+def load(path: Path) -> tuple[dict, set[str]]:
     if not path.exists():
-        return set()
+        return {"version": 1, "disabled": []}, set()
     try:
         data = json.loads(path.read_text(encoding="utf-8"))
+        if not isinstance(data, dict):
+            raise ValueError("корневое значение настроек должно быть объектом JSON")
         disabled = data.get("disabled", [])
         if not isinstance(disabled, list) or any(not isinstance(x, str) for x in disabled):
             raise ValueError("поле disabled должно быть списком имён навыков")
         unknown = set(disabled) - set(SKILLS)
         if unknown:
             raise ValueError("неизвестные навыки в настройках: " + ", ".join(sorted(unknown)))
-        return set(disabled)
+        return data, set(disabled)
     except (json.JSONDecodeError, OSError, ValueError) as exc:
         raise SystemExit(f"Не удалось прочитать {path}: {exc}")
 
 
-def save(path: Path, disabled: set[str]) -> None:
+def save(path: Path, settings: dict, disabled: set[str]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    payload = json.dumps({"version": 1, "disabled": sorted(disabled)}, ensure_ascii=False, indent=2) + "\n"
+    updated = dict(settings)
+    updated["version"] = 1
+    updated["disabled"] = sorted(disabled)
+    payload = json.dumps(updated, ensure_ascii=False, indent=2) + "\n"
     fd, tmp_name = tempfile.mkstemp(prefix="settings-", suffix=".tmp", dir=path.parent)
     try:
         with os.fdopen(fd, "w", encoding="utf-8", newline="\n") as f:
@@ -59,7 +64,7 @@ def save(path: Path, disabled: set[str]) -> None:
 def main() -> int:
     args = sys.argv[1:]
     path = settings_path()
-    disabled = load(path)
+    settings, disabled = load(path)
     if not args or args[0] in {"help", "--help", "-h"}:
         print("Команды: list | enable <навык|all> | disable <навык> | reset")
         print(f"Настройки: {path}")
@@ -72,7 +77,7 @@ def main() -> int:
         print(f"\nФайл настроек: {path}")
         return 0
     if command == "reset" and len(args) == 1:
-        save(path, set())
+        save(path, settings, set())
         print("Все 41 рабочих навыков включены.")
         return 0
     if command in {"enable", "disable"} and len(args) == 2:
@@ -86,7 +91,7 @@ def main() -> int:
             disabled.discard(name)
         else:
             disabled.add(name)
-        save(path, disabled)
+        save(path, settings, disabled)
         print(("Включён" if command == "enable" else "Выключен") + f" навык: {name}")
         print(f"Сохранено: {path}")
         return 0

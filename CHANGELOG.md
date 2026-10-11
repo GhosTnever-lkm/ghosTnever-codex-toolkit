@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.1.3 - 2026-10-12
+
+- Preserve unrelated settings when changing Mega Toolkit skill controls.
+- Reject non-object settings files with a clear error.
+
 ## 1.1.2 - 2026-10-08
 
 - Added a Windows PowerShell helper so per-skill controls work without Python.

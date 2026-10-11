@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.1.3 - 2026-10-12
+
+- Preserve unrelated local settings when enabling, disabling, or resetting skills.
+- Validate that the settings file contains a JSON object before updating it.
+
 ## 1.1.2 - 2026-10-08
 
 - Added Windows PowerShell controls and direct settings changes in Codex.

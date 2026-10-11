@@ -28,10 +28,19 @@ if (-not $codexRoot) {
 $settingsDirectory = Join-Path $codexRoot 'ghostnever-mega-toolkit'
 $settingsPath = Join-Path $settingsDirectory 'settings.json'
 $disabledSkills = @()
+$preservedSettings = [ordered]@{}
 
 if (Test-Path -LiteralPath $settingsPath) {
     try {
         $existingSettings = Get-Content -LiteralPath $settingsPath -Raw | ConvertFrom-Json -ErrorAction Stop
+        if ($null -eq $existingSettings -or $existingSettings -isnot [pscustomobject]) {
+            throw 'The root settings value must be a JSON object.'
+        }
+        foreach ($property in $existingSettings.PSObject.Properties) {
+            if ($property.Name -notin @('version', 'disabled')) {
+                $preservedSettings[$property.Name] = $property.Value
+            }
+        }
         if ($null -ne $existingSettings.disabled) {
             $disabledSkills = @($existingSettings.disabled)
         }
@@ -77,11 +86,11 @@ switch ($Command) {
 }
 
 New-Item -ItemType Directory -Path $settingsDirectory -Force | Out-Null
-$newSettings = [ordered]@{
-    version = 1
-    disabled = @($disabledSkills | Sort-Object -Unique)
+$newSettings = [ordered]@{ version = 1; disabled = @($disabledSkills | Sort-Object -Unique) }
+foreach ($key in $preservedSettings.Keys) {
+    $newSettings[$key] = $preservedSettings[$key]
 }
-$json = $newSettings | ConvertTo-Json -Depth 4
+$json = $newSettings | ConvertTo-Json -Depth 100
 $temporaryPath = Join-Path $settingsDirectory ('.settings-' + [guid]::NewGuid().ToString('N') + '.tmp')
 [System.IO.File]::WriteAllText($temporaryPath, $json + [Environment]::NewLine, [System.Text.UTF8Encoding]::new($false))
 Move-Item -LiteralPath $temporaryPath -Destination $settingsPath -Force

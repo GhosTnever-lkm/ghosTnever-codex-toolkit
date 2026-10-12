@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.1.4 - 2026-10-12
+
+- Add Python regression coverage for skill inventory and settings preservation.
+- Add Linux/Windows CI and a Windows smoke check for the PowerShell settings helper.
+
 ## 1.1.3 - 2026-10-12
 
 - Preserve unrelated settings when changing Mega Toolkit skill controls.

@@ -1,5 +1,7 @@
 # GhosTnever Codex Toolkit
 
+[![Toolkit validation](https://github.com/GhosTnever-lkm/ghosTnever-codex-toolkit/actions/workflows/validate.yml/badge.svg)](https://github.com/GhosTnever-lkm/ghosTnever-codex-toolkit/actions/workflows/validate.yml) [![Latest release](https://img.shields.io/github/v/release/GhosTnever-lkm/ghosTnever-codex-toolkit)](https://github.com/GhosTnever-lkm/ghosTnever-codex-toolkit/releases)
+
 Focused Codex plugins for everyday software work, from understanding a codebase to reviewing changes, debugging CI, planning releases, and maintaining documentation. The Mega Toolkit combines 41 practical skills in one plugin, with local per-skill controls; the focused plugins remain available when you want a smaller install.
 
 ## Plugins

@@ -1,0 +1,35 @@
+name: Toolkit validation
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  python-settings-ubuntu:
+    name: Python settings helper (Ubuntu)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # actions/checkout refs/tags/v4
+      - name: Run settings and manifest regression tests
+        run: python -m unittest discover -s plugins/ghostnever-mega-toolkit/tests -v
+
+  python-settings-windows:
+    name: Python settings helper (Windows)
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # actions/checkout refs/tags/v4
+      - name: Run settings and manifest regression tests
+        run: python -m unittest discover -s plugins/ghostnever-mega-toolkit/tests -v
+
+  powershell-settings:
+    name: PowerShell settings helper
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # actions/checkout refs/tags/v4
+      - name: Smoke-test the PowerShell settings helper
+        shell: pwsh
+        run: ./plugins/ghostnever-mega-toolkit/tests/settings-helper-smoke.ps1

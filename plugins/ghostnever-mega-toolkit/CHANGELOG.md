@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.1.4 - 2026-10-12
+
+- Add regression checks that toolkit skill folders, marketplace manifest, and both settings helpers stay aligned.
+- Verify settings preservation, invalid-input handling, and Windows PowerShell behavior in CI.
+
 ## 1.1.3 - 2026-10-12
 
 - Preserve unrelated local settings when enabling, disabling, or resetting skills.

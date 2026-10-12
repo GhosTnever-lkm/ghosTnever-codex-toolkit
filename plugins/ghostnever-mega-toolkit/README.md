@@ -1,5 +1,7 @@
 # GhosTnever Mega Toolkit
 
+[![Toolkit validation](https://github.com/GhosTnever-lkm/ghosTnever-codex-toolkit/actions/workflows/validate.yml/badge.svg)](https://github.com/GhosTnever-lkm/ghosTnever-codex-toolkit/actions/workflows/validate.yml) [![Latest release](https://img.shields.io/github/v/release/GhosTnever-lkm/ghosTnever-codex-toolkit)](https://github.com/GhosTnever-lkm/ghosTnever-codex-toolkit/releases)
+
 One Codex plugin with 41 practical workflow skills and local controls to enable or disable each workflow. It covers the full path from understanding a codebase and planning work to implementation, review, release, and long-term maintenance.
 
 ## Skills

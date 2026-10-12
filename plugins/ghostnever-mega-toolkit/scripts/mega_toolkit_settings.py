@@ -62,6 +62,11 @@ def save(path: Path, settings: dict, disabled: set[str]) -> None:
 
 
 def main() -> int:
+    # Redirected Windows streams can use a legacy code page that cannot print Cyrillic.
+    for stream in (sys.stdout, sys.stderr):
+        if not stream.isatty() and hasattr(stream, "reconfigure"):
+            stream.reconfigure(encoding="utf-8", errors="backslashreplace")
+
     args = sys.argv[1:]
     path = settings_path()
     settings, disabled = load(path)

@@ -4,6 +4,7 @@
 
 - Verify the 41 task skills match both plugin manifests and both settings helpers.
 - Add end-to-end regression coverage for local enable/disable controls on Windows and Linux.
+- Keep Russian CLI messages readable when output is redirected on Windows.
 
 ## 1.1.3 - 2026-10-12
 

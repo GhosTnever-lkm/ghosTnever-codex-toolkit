@@ -70,6 +70,7 @@ class PythonSettingsCommandTests(unittest.TestCase):
             check=False,
             capture_output=True,
             text=True,
+            encoding="utf-8",
             env=env,
         )
 
@@ -85,6 +86,7 @@ class PythonSettingsCommandTests(unittest.TestCase):
 
             result = self.run_helper(home, "disable", "git-workflow")
             self.assertEqual(0, result.returncode, result.stderr)
+            self.assertIn("Выключен навык: git-workflow", result.stdout)
             saved = json.loads(path.read_text(encoding="utf-8"))
             self.assertEqual(["git-workflow"], saved["disabled"])
             self.assertEqual({"theme": "dark"}, saved["custom"])

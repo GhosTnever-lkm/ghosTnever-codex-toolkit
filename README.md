@@ -1,5 +1,7 @@
 # GhosTnever Codex Toolkit
 
+[![Tests](https://github.com/GhosTnever-lkm/ghosTnever-codex-toolkit/actions/workflows/quality.yml/badge.svg)](https://github.com/GhosTnever-lkm/ghosTnever-codex-toolkit/actions/workflows/quality.yml) [![Release](https://img.shields.io/github/v/release/GhosTnever-lkm/ghosTnever-codex-toolkit)](https://github.com/GhosTnever-lkm/ghosTnever-codex-toolkit/releases/latest) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 Focused Codex plugins for everyday software work, from understanding a codebase to reviewing changes, debugging CI, planning releases, and maintaining documentation. The Mega Toolkit combines 41 practical skills in one plugin, with local per-skill controls; the focused plugins remain available when you want a smaller install.
 
 ## Plugins
@@ -50,7 +52,7 @@ The local settings file keeps disabled module names under `%CODEX_HOME%\ghostnev
 ## Validate locally
 
 ```powershell
-codex plugin marketplace add .\work\codex-plugins\ghosTnever-codex-toolkit
+codex plugin marketplace add .
 codex plugin list
 codex plugin marketplace remove ghosTnever-codex-toolkit
 ```

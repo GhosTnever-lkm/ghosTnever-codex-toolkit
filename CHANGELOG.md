@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.1.4 - 2026-10-12
+
+- Added Windows and Linux CI for skill catalog, settings helpers, and plugin metadata checks.
+- Corrected the local marketplace validation command to use the repository root.
+
 ## 1.1.3 - 2026-10-12
 
 - Preserve unrelated settings when changing Mega Toolkit skill controls.

@@ -1,5 +1,7 @@
 # GhosTnever Mega Toolkit
 
+[![Tests](https://github.com/GhosTnever-lkm/ghosTnever-codex-toolkit/actions/workflows/quality.yml/badge.svg)](https://github.com/GhosTnever-lkm/ghosTnever-codex-toolkit/actions/workflows/quality.yml) [![Release](https://img.shields.io/github/v/release/GhosTnever-lkm/ghosTnever-codex-toolkit)](https://github.com/GhosTnever-lkm/ghosTnever-codex-toolkit/releases/latest) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 One Codex plugin with 41 practical workflow skills and local controls to enable or disable each workflow. It covers the full path from understanding a codebase and planning work to implementation, review, release, and long-term maintenance.
 
 ## Skills

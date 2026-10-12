@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.1.4 - 2026-10-12
+
+- Verify the 41 task skills match both plugin manifests and both settings helpers.
+- Add end-to-end regression coverage for local enable/disable controls on Windows and Linux.
+
 ## 1.1.3 - 2026-10-12
 
 - Preserve unrelated local settings when enabling, disabling, or resetting skills.

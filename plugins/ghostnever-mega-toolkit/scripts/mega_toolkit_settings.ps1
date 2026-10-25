@@ -7,6 +7,10 @@ param(
     [string]$Name
 )
 
+if ($Command -in @('list', 'reset') -and $PSBoundParameters.ContainsKey('Name')) {
+    throw "The '$Command' command does not accept a skill name."
+}
+
 $skillNames = @(
     'accessibility-audit', 'api-design', 'archive-hardening', 'browser-automation',
     'bug-hunting', 'change-review', 'ci-failure-triage', 'configuration-management',

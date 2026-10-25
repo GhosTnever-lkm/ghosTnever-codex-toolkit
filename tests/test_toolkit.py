@@ -164,6 +164,25 @@ class PowerShellSettingsCommandTests(unittest.TestCase):
             self.assertEqual([], saved["disabled"])
             self.assertEqual({"theme": "dark"}, saved["custom"])
 
+    @unittest.skipUnless(os.name == "nt", "PowerShell helper is Windows-specific")
+    def test_reset_rejects_extra_skill_name_without_modifying_settings(self) -> None:
+        shell = shutil.which("pwsh") or shutil.which("powershell")
+        self.assertIsNotNone(shell)
+        with tempfile.TemporaryDirectory() as temporary:
+            home = Path(temporary)
+            path = home / "ghostnever-mega-toolkit" / "settings.json"
+            path.parent.mkdir(parents=True)
+            original = {"version": 1, "disabled": ["git-workflow"], "custom": {"theme": "dark"}}
+            path.write_text(json.dumps(original), encoding="utf-8")
+            env = os.environ.copy()
+            env["CODEX_HOME"] = str(home)
+            result = subprocess.run(
+                [shell, "-NoProfile", "-NonInteractive", "-ExecutionPolicy", "Bypass", "-File", str(SCRIPTS / "mega_toolkit_settings.ps1"), "reset", "git-workflow"],
+                check=False, capture_output=True, text=True, env=env,
+            )
+            self.assertNotEqual(0, result.returncode)
+            self.assertEqual(original, json.loads(path.read_text(encoding="utf-8")))
+
 
 if __name__ == "__main__":
     unittest.main()

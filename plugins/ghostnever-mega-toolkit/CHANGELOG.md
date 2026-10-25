@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.1.5 - 2026-10-25
+
+- Reject extra skill names on the PowerShell list/reset commands so malformed reset invocations cannot silently clear disabled skills.
+- Add a Windows regression that verifies rejected reset arguments leave the settings file unchanged.
+
 ## 1.1.4 - 2026-10-12
 
 - Verify the 41 task skills match both plugin manifests and both settings helpers.

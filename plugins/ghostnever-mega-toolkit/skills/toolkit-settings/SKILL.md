@@ -16,7 +16,7 @@ The included PowerShell helper works on Windows without Python:
 & "<plugin-folder>\scripts\mega_toolkit_settings.ps1" reset
 ```
 
-The settings file is `%CODEX_HOME%\ghostnever-mega-toolkit\settings.json`, or `%USERPROFILE%\.codex\ghostnever-mega-toolkit\settings.json` if `CODEX_HOME` is not set. A missing file means every skill is enabled. A disabled skill must not apply its specialized workflow unless the user explicitly requests a one-time override. Settings remain on the device and are not sent over the network. A Python helper is also included for cross-platform use.
+The settings file is `%CODEX_HOME%\ghostnever-mega-toolkit\settings.json`, or `%USERPROFILE%\.codex\ghostnever-mega-toolkit\settings.json` if `CODEX_HOME` is not set. A missing file means every skill is enabled. A disabled skill must not apply its specialized workflow unless the user explicitly requests a one-time override. These switches do not uninstall or hide a skill from the installed plugin catalog; they only control whether its specialized workflow is applied. Settings remain on the device and are not sent over the network. A Python helper is also included for cross-platform use.
 
 Codex currently does not expose an independent graphical toggle for every skill, so this helper provides the per-skill controls.
 

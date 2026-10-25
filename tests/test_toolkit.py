@@ -59,6 +59,20 @@ class ToolkitCatalogTests(unittest.TestCase):
         self.assertIn("codex plugin marketplace add .", readme)
         self.assertNotIn(".\\work\\codex-plugins\\ghosTnever-codex-toolkit", readme)
 
+    def test_skill_toggle_scope_is_clear_in_all_docs(self) -> None:
+        sentence = (
+            "These switches do not uninstall or hide a skill from the installed plugin catalog; "
+            "they only control whether its specialized workflow is applied."
+        )
+        documents = (
+            ROOT / "README.md",
+            PLUGIN / "README.md",
+            PLUGIN / "skills" / "toolkit-settings" / "SKILL.md",
+        )
+        for path in documents:
+            with self.subTest(document=path.relative_to(ROOT)):
+                self.assertIn(sentence, path.read_text(encoding="utf-8"))
+
 
 class PythonSettingsCommandTests(unittest.TestCase):
     def run_helper(self, home: Path, *args: str) -> subprocess.CompletedProcess[str]:

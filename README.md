@@ -40,7 +40,7 @@ In Codex, ask to enable or disable a workflow by name. On Windows, use the inclu
 
 `mega_toolkit_settings.py` is included for cross-platform use when Python 3 is installed.
 
-The local settings file keeps disabled module names under `%CODEX_HOME%\ghostnever-mega-toolkit\settings.json` (or `%USERPROFILE%\.codex\ghostnever-mega-toolkit\settings.json` if `CODEX_HOME` is unset). No settings are sent over the network. Codex currently does not offer native graphical toggles for individual skills.
+The local settings file keeps disabled module names under `%CODEX_HOME%\ghostnever-mega-toolkit\settings.json` (or `%USERPROFILE%\.codex\ghostnever-mega-toolkit\settings.json` if `CODEX_HOME` is unset). No settings are sent over the network. Codex currently does not offer native graphical toggles for individual skills. These switches do not uninstall or hide a skill from the installed plugin catalog; they only control whether its specialized workflow is applied.
 
 ## Design notes
 

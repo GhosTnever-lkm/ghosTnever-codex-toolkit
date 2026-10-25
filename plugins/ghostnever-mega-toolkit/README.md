@@ -44,7 +44,7 @@ In Codex, ask to enable or disable a workflow by name; the always-on Toolkit Set
 
 `mega_toolkit_settings.py` is also available for cross-platform use when Python 3 is installed.
 
-The settings file is local: `%CODEX_HOME%\ghostnever-mega-toolkit\settings.json`, or `%USERPROFILE%\.codex\ghostnever-mega-toolkit\settings.json` if `CODEX_HOME` is unset. A missing file means all skills are enabled. The helper supports per-skill enable and disable, listing, and reset, and preserves unrelated top-level settings when saving. Codex does not currently expose individual native graphical toggles; each skill's instructions respect this local setting, and a user can request a one-time override.
+The settings file is local: `%CODEX_HOME%\ghostnever-mega-toolkit\settings.json`, or `%USERPROFILE%\.codex\ghostnever-mega-toolkit\settings.json` if `CODEX_HOME` is unset. A missing file means all skills are enabled. The helper supports per-skill enable and disable, listing, and reset, and preserves unrelated top-level settings when saving. Codex does not currently expose individual native graphical toggles; each skill's instructions respect this local setting, and a user can request a one-time override. These switches do not uninstall or hide a skill from the installed plugin catalog; they only control whether its specialized workflow is applied.
 
 ## How it works
 
